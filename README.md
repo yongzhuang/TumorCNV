@@ -17,7 +17,7 @@ If you want to run TumorCNV, you'll need:
 
 ## Running
 usage: java -jar TumorCNV.jar [OPTIONS]
-1. preprocess  
+**1. preprocess**  
    This option is used to extract the information from the normal and tumor BAM files.
 
    usage: java -jar TumorCNV.jar preprocess [OPTIONS]
@@ -32,7 +32,7 @@ usage: java -jar TumorCNV.jar [OPTIONS]
    -minMappingQuality   <INT> minimum mapping quality (optional, default 1)  
    -minBaseQuality   <INT> minimum base quality (optional, default 20)  
 
-2. call  
+**2. call**  
    This option is used to jointly call germline and soamtic CNVs.  
 
    usage: java -jar TumorCNV.jar call [OPTIONS]  
