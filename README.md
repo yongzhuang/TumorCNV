@@ -17,10 +17,11 @@ If you want to run TumorCNV, you'll need:
 
 ## Running
 usage: java -jar TumorCNV.jar [OPTIONS]  
+
 **1. preprocess**  
    This option is used to extract the information from the normal and tumor BAM files.
 
-   usage: java -jar TumorCNV.jar preprocess [OPTIONS]
+   **usage: java -jar TumorCNV.jar preprocess [OPTIONS]**
 
    -referenceSequenceFile  <FILE>   reference genome file (required)  
    -normalVCFFile <FILE>   normal sample's vcf file (optional)   
@@ -35,7 +36,7 @@ usage: java -jar TumorCNV.jar [OPTIONS]
 **2. call**  
    This option is used to jointly call germline and soamtic CNVs.  
 
-   usage: java -jar TumorCNV.jar call [OPTIONS]  
+   **usage: java -jar TumorCNV.jar call [OPTIONS]**  
 
    -rdFile  <FILE>   read depth file (required)  
    -afFile  <FILE>   allele frequency file (optional)  
