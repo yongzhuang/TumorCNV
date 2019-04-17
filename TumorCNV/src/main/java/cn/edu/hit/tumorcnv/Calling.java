@@ -87,7 +87,6 @@ public class Calling {
 		} else {
 			observationList = getObservationList(rdFile, afFile);
 		}
-
 		List<List<Observation>> rawObservationList = getObservationListByChrom(observationList);
 		List<List<Observation>> observationListByChrom;
 		if (this.intervalFile != null) {
@@ -97,7 +96,6 @@ public class Calling {
 		} else {
 			observationListByChrom = rawObservationList;
 		}
-
 		File file = new File(outputFile);
 		if (file.exists()) {
 			try {
@@ -107,7 +105,6 @@ public class Calling {
 				ex.printStackTrace();
 			}
 		}
-
 		ThreadPoolExecutor threadPool = (ThreadPoolExecutor) Executors.newFixedThreadPool(numOfThreads);
 		for (int i = 0; i < observationListByChrom.size(); i++) {
 			List<Observation> observations = observationListByChrom.get(i);
@@ -131,7 +128,6 @@ public class Calling {
 			if (observationList2.size() > 0) {
 				double[] pi = getPI();
 				int D = observationList2.get(0).getEnd() - observationList2.get(0).getStart() + 1;
-				;
 				Transition transition = (new Transition(D, p));
 				Viterbi viterbi2 = (new Viterbi(observationList2, pi, transition, emission));
 				threadPool.execute(new SingleThreadCall(viterbi2, outputFile, minDistance, tau));
@@ -332,10 +328,11 @@ public class Calling {
 			}
 			int windowSize = rawObservationList.get(0).getEnd() - rawObservationList.get(0).getStart() + 1;
 			int index = (pos - 1) / windowSize;
-			if (index < currentChromObservationList.size()) {
-				currentChromObservationList.get(index)
+			int startIndex = (currentChromObservationList.get(0).getStart() - 1) / windowSize;
+			if (index - startIndex < currentChromObservationList.size()) {
+				currentChromObservationList.get(index - startIndex)
 						.addNormalAlleleCountList(new int[] { normalRefCount, normalAltCount });
-				currentChromObservationList.get(index)
+				currentChromObservationList.get(index - startIndex)
 						.addTumorAlleleCountList(new int[] { tumorRefCount, tumorAltCount });
 			}
 		}
