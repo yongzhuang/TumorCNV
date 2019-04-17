@@ -1,12 +1,13 @@
 # TumorCNV
-# Introduction 
+## Introduction 
 TumorCNV is a tool designed to jointly detecting of germline and somatic copy number events from WGS data of the matched tumor-normal sample pair.
-# Installation
+## Installation
 The easiest way to get TumorCNV is to download the binary distribution from the TumorCNV github release page. Alternatively, you can build TumorCNV from source with gradle.
 1. git clone --recursive https://github.com/yongzhuang/TumorCNV.git
 2. Install gradle build tool (https://gradle.org/)
 3. cd TumorCNV 
 4. gradle build  
+
 You'll find the executable jar file in TumorCNV/build/libs/. 
 
 If you want to run TumorCNV, you'll need:
@@ -14,7 +15,7 @@ If you want to run TumorCNV, you'll need:
 2. Install R (Rscript exectuable must be on the path)
 3. Install Runiversal (https://cran.r-project.org/web/packages/Runiversal/index.html), VGAM (https://cran.r-project.org/web/packages/VGAM/index.html) and qcc(https://cran.r-project.org/web/packages/qcc/) package in R
 
-# Running
+## Running
 usage: java -jar TumorCNV.jar [OPTIONS]
 1. preprocess  
    This option is used to extract the information from the normal and tumor BAM files.
@@ -49,9 +50,9 @@ usage: java -jar TumorCNV.jar [OPTIONS]
    -outlier <FLOAT>  the percentage of outliers (optional, default 0.1)  
    -nt   <INT> number of threads (optional, default 1)  
 
-# Example
+## Example
 
 The sample data sets and script can be found at TumorCNV/example, but the users need to download the reference genome file (ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz) and mappability file (http://hgdownload.cse.ucsc.edu/goldenpath/hg19/encodeDCC/wgEncodeMapability/wgEncodeCrgMapabilityAlign100mer.bigWig).
 
-# Contact 
+## Contact 
    yzhuangliu@gmail.com
