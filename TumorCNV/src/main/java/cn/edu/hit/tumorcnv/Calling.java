@@ -110,6 +110,9 @@ public class Calling {
 			List<Observation> observations = observationListByChrom.get(i);
 			String chrom = observations.get(0).getChrom();
 			logger.info("Chromosome " + chrom + " ......");
+	        if(chrom.equals("X")||chrom.equals("Y")) {
+	        	break;
+	        }
 			List<Observation> observationList1 = getFilteredReadDepthList(observations, MIN_GC, MAX_GC, minMappability);
 			double rho = 0;
 			NBModel[] nbModels = getNBModels(observationList1);

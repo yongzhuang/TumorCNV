@@ -1,6 +1,3 @@
-/**
- * 
- */
 package cn.edu.hit.tumorcnv;
 
 import java.io.File;

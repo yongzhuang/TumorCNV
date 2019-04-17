@@ -14,7 +14,6 @@ public class Viterbi {
 	private Transition transition;
 	private double[] PI;
 
-
 	private static final int NUM_STATES = 9;
 	private HashMap<Integer, int[]> STATE_MAP;;
 
@@ -110,7 +109,7 @@ public class Viterbi {
 	public void setPI(double[] pI) {
 		PI = pI;
 	}
-	
+
 	public Transition getTransition() {
 		return transition;
 	}
