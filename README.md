@@ -6,7 +6,7 @@ The easiest way to get TumorCNV is to download the binary distribution from the 
 1. git clone --recursive https://github.com/yongzhuang/TumorCNV.git
 2. Install gradle build tool (https://gradle.org/)
 3. cd TumorCNV 
-4. gradle build 
+4. gradle build   
 You'll find the executable jar file in TumorCNV/build/libs/. 
 
 If you want to run TumorCNV, you'll need:
@@ -21,34 +21,33 @@ usage: java -jar TumorCNV.jar [OPTIONS]
 
    usage: java -jar TumorCNV.jar preprocess [OPTIONS]
 
-   -referenceSequenceFile  <FILE>   reference genome file (required)
-   -normalVCFFile <FILE>   normal sample's vcf file (optional) 
-   -normalBAMFile <FILE>   normal sample's bam file (required)
-   -tumorBAMFile  <FILE>   tumor sample's bam file (required)
-   -mappabilityFile  <FILE>   mappability file (required)
-   -outputPrefix  <FILE>    prefix of output file (required)
-   -windowSize <INT> window size (optional, default 200)
-   -minMappingQuality   <INT> minimum mapping quality (optional, default 1)
-   -minBaseQuality   <INT> minimum base quality (optional, default 20)
+   -referenceSequenceFile  <FILE>   reference genome file (required)  
+   -normalVCFFile <FILE>   normal sample's vcf file (optional)   
+   -normalBAMFile <FILE>   normal sample's bam file (required)  
+   -tumorBAMFile  <FILE>   tumor sample's bam file (required)  
+   -mappabilityFile  <FILE>   mappability file (required)  
+   -outputPrefix  <FILE>    prefix of output file (required)  
+   -windowSize <INT> window size (optional, default 500)  
+   -minMappingQuality   <INT> minimum mapping quality (optional, default 1)  
+   -minBaseQuality   <INT> minimum base quality (optional, default 20)  
 
 2. call
-   This option is used to jointly call germline and soamtic CNVs.
+   This option is used to jointly call germline and soamtic CNVs.  
 
-   usage: java -jar TumorCNV.jar call [OPTIONS]
+   usage: java -jar TumorCNV.jar call [OPTIONS]  
 
-   -rdFile  <FILE>   read depth file (required)
-   -afFile  <FILE>   allele frequency file (optional)
-   -mappabilityFile  <FILE>   mappability file (required)
-   -outputFile <FILE>   prefix of toutput file (required)
-   -exclude <FILE>   exclude regions
-   -transitionProb   <FLOAT>  transition probability of different states (optional, default 0.00001)
-   -minMappability   <FLOAT>  minimum mappability of window (optional, default 0.2)
-   -minDisatance  <INT> minimum distance to merge adjacent CNVs (optional, default 10000)
-   -train   <BOOLEAN>   train the HMM model (optional, default false)
-   -purity  <FLOAT>  tumor purity (optional, default 1.0)
-   -ploidy  <INT> tumor ploidy (optional, default 2)
-   -outlier <FLOAT>  the percentage of outliers (optional, default 0.1)
-   -nt   <INT> number of threads (optional, default 1)
+   -rdFile  <FILE>   read depth file (required)  
+   -afFile  <FILE>   allele frequency file (optional)  
+   -mappabilityFile  <FILE>   mappability file (required)  
+   -outputFile <FILE>   prefix of toutput file (required)  
+   -exclude <FILE>   exclude regions  
+   -transitionProb   <FLOAT>  transition probability of different states (optional, default 0.00001)  
+   -minMappability   <FLOAT>  minimum mappability of window (optional, default 0.3)  
+   -minDisatance  <INT> minimum distance to merge adjacent CNVs (optional, default 10000)  
+   -purity  <FLOAT>  tumor purity (optional, default 1.0)  
+   -ploidy  <INT> tumor ploidy (optional, default 2)  
+   -outlier <FLOAT>  the percentage of outliers (optional, default 0.1)  
+   -nt   <INT> number of threads (optional, default 1)  
 
 # Example
 
