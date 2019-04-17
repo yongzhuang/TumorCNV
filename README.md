@@ -16,7 +16,7 @@ If you want to run TumorCNV, you'll need:
 3. Install Runiversal (https://cran.r-project.org/web/packages/Runiversal/index.html), VGAM (https://cran.r-project.org/web/packages/VGAM/index.html) and qcc(https://cran.r-project.org/web/packages/qcc/) package in R
 
 ## Running
-usage: java -jar TumorCNV.jar [OPTIONS]
+usage: java -jar TumorCNV.jar [OPTIONS]  
 **1. preprocess**  
    This option is used to extract the information from the normal and tumor BAM files.
 
