@@ -61,4 +61,4 @@ The sample data sets and script can be found at TumorCNV/example, but the users 
    yzhuangliu@gmail.com
    
 ## License
-MIT
+[MIT](https://github.com/yongzhuang/TumorCNV/blob/master/LICENSE)
