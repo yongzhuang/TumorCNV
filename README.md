@@ -59,3 +59,6 @@ The sample data sets and script can be found at TumorCNV/example, but the users 
 
 ## Contact 
    yzhuangliu@gmail.com
+   
+## License
+MIT
