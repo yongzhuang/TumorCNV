@@ -6,7 +6,7 @@ The easiest way to get TumorCNV is to download the binary distribution from the 
 1. git clone --recursive https://github.com/yongzhuang/TumorCNV.git
 2. Install gradle build tool (https://gradle.org/)
 3. cd TumorCNV 
-4. gradle build   
+4. gradle build  
 You'll find the executable jar file in TumorCNV/build/libs/. 
 
 If you want to run TumorCNV, you'll need:
