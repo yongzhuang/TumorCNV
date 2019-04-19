@@ -59,7 +59,7 @@ The sample data sets and script can be found at http://182.92.97.240/exchange/19
 and the users need to download the reference genome file (ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz) and mappability file (http://hgdownload.cse.ucsc.edu/goldenpath/hg19/encodeDCC/wgEncodeMapability/wgEncodeCrgMapabilityAlign100mer.bigWig).
 
 ## Contact 
-   yzhuangliu@gmail.com
+   yongzhuang.liu@hit.edu.cn
    
 ## License
 [MIT](https://github.com/yongzhuang/TumorCNV/blob/master/LICENSE)
