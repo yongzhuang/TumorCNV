@@ -618,6 +618,9 @@ public class Calling {
 		code.addRCode("label<-c(1, 1, 1, 1)");
 		code.addRCode("for(i in 1:4){");
 		code.addRCode("if(!require(packages[i], character.only=TRUE)){");
+		code.addRCode("install.packages(packages[i], repos=\"http://cran.r-project.org\")");
+		code.addRCode("}");
+		code.addRCode("if(!require(packages[i], character.only=TRUE)){");
 		code.addRCode("label[i]=0");
 		code.addRCode("}");
 		code.addRCode("}");
